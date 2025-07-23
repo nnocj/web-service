@@ -2,7 +2,7 @@ const routes = require('express').Router();
 
 
 routes.get('/', (req, res) => {
-    res.send('Server is running!');
+    res.redirect('/index.html');
 })
 
 
