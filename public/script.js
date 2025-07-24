@@ -1,6 +1,4 @@
 // helpful link for converting image to base64: https://elmah.io/tools/base64-image-encoder/
-const {mongoClient} = require('mongodb');
-
 async function apiFetch(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -8,7 +6,7 @@ async function apiFetch(url) {
 }
 
 const getData = async () => {
-  const data = await apiFetch('mongodb+srv://nicholascommey01:Good2356u%40@cluster0.nfzhinb.mongodb.net/');
+  const data = await apiFetch('http://localhost:8080/api/profile');
   displayAllData(data);
 };
 
